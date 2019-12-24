@@ -1,0 +1,14 @@
+---
+layout: default
+title: v4p0r
+---
+<div class="posts">
+  <p><span class="red">.::[</span><span><b>Blog</b></span><span class="red"></span></p>
+  <ul>
+    {% for post in site.posts limit: 5 %}
+    <li><div class="data">{{ post.date | date_to_string }}</div> ::
+     <a href="{{ post.url }}"><b>{{ post.title }}</b></a></li>
+    {% endfor %}
+  </ul>
+</div>
+{% include footer.html %}
